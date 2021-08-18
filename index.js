@@ -645,7 +645,7 @@ for (let item of items) {
 
 function addToItemList(itemListHTML, item) {
   itemListHTML.innerHTML +=
-    `<div class="col-6 col-md-6 col-lg-4 col-xl-3 cardContainer"><div class="card"><img class="card-img-top" src="${item.image}" alt="Card image cap"><div class="card-body"><h4 class="card-title" data-bs-toggle="tooltip" data-bs-placement="top" title="${item.aname}"><a>` +
+    `<div class="col-6 col-md-6 col-lg-4 col-xl-3 cardContainer"><div class="card"><img class="card-img-top" src="${item.image}" alt="Card image cap"><div class="card-body"><h4 class="card-title" data-bs-toggle="tooltip" data-bs-placement="top" title="${item.name}"><a>` +
     item.name +
     '</a></h4></div></div></div></div></div>';
   $(function () {
