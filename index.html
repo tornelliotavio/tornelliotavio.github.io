@@ -11,24 +11,36 @@
       integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/b529fc99c4.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Catalogo</title>
   </head>
   <body>
     <nav
       class="navbar navbar-expand-md navbar-dark bg-dark"
-      style="margin-bottom: 10px"
+      style="margin-bottom: 10px; background-color: #f17329 !important"
     >
       <div class="container">
         <a class="navbar-brand" href="index.html"
-          ><img class="header-logo" src="logo.png"
+          ><img class="header-logo" src="logoWhite.png"
         /></a>
 
-        <div class="form-outline" style="margin: 12px">
+        <div class="form-group has-search" style="margin: 12px">
+          <span class="fa fa-search form-control-feedback"></span>
           <input
             onkeyup="searchFilter()"
             id="searchFilterInput"
             class="form-control"
             placeholder="Pesquisar..."
+            style="border-radius: 10px"
           />
         </div>
       </div>
@@ -36,8 +48,8 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-sm-12 col-md-3">
-          <div class="card bg-light mb-3">
+        <div class="col-sm-12 col-md-3" style="margin-bottom: 10px">
+          <!-- <div class="card bg-light mb-3">
             <div class="card-header text-white text-uppercase">
               <i class="fa fa-list"></i>Categorias
             </div>
@@ -48,10 +60,378 @@
               >
                 <a>Temperos e especiarias</a>
               </li>
+              <li class="list-group-item" onclick="categoryFilter('vegChips')">
+                <a>Vegetais Chips</a>
+              </li>
+              <li class="list-group-item" onclick="categoryFilter('collagen')">
+                <a>Colageno</a>
+              </li>
+              <li class="list-group-item" onclick="categoryFilter('vinegar')">
+                <a>Vinagre</a>
+              </li>
+              <li
+                class="list-group-item"
+                onclick="categoryFilter('vegetarian')"
+              >
+                <a>Vegetariano</a>
+              </li>
+              <li class="list-group-item" onclick="categoryFilter('veggies')">
+                <a>Vegetais</a>
+              </li>
+              <li
+                class="list-group-item"
+                onclick="categoryFilter('suplements')"
+              >
+                <a>Suplementos</a>
+              </li>
+              <li class="list-group-item" onclick="categoryFilter('snack')">
+                <a>Snacks</a>
+              </li>
+              <li class="list-group-item" onclick="categoryFilter('seed')">
+                <a>Sementes</a>
+              </li>
+              <li class="list-group-item" onclick="categoryFilter('salt')">
+                <a>Sais</a>
+              </li>
+              <li class="list-group-item" onclick="categoryFilter('chemical')">
+                <a>Quimicos</a>
+              </li>
+              <li class="list-group-item" onclick="categoryFilter('cheese')">
+                <a>Queijos</a>
+              </li>
+              <li
+                class="list-group-item"
+                onclick="categoryFilter('soyProtein')"
+              >
+                <a>Proteina de soja</a>
+              </li>
+              <li class="list-group-item" onclick="categoryFilter('pate')">
+                <a>Pate</a>
+              </li>
+              <li class="list-group-item" onclick="categoryFilter('bread')">
+                <a>Pães</a>
+              </li>
+              <li class="list-group-item" onclick="categoryFilter('oil')">
+                <a>Óleos</a>
+              </li>
+              <li class="list-group-item" onclick="categoryFilter('nuts')">
+                <a>Nozes</a>
+              </li>
+              <li class="list-group-item" onclick="categoryFilter('honey')">
+                <a>Mel</a>
+              </li>
+              <li class="list-group-item" onclick="categoryFilter('butter')">
+                <a>Manteigas</a>
+              </li>
+              <li class="list-group-item" onclick="categoryFilter('dairy')">
+                <a>Lacteos</a>
+              </li>
+              <li class="list-group-item" onclick="categoryFilter('grains')">
+                <a>Grãos</a>
+              </li>
+              <li class="list-group-item" onclick="categoryFilter('jam')">
+                <a>Geleias</a>
+              </li>
+              <li class="list-group-item" onclick="categoryFilter('fruit')">
+                <a>Frutas</a>
+              </li>
+              <li class="list-group-item" onclick="categoryFilter('herbal')">
+                <a>Fitoterápicos</a>
+              </li>
+              <li
+                class="list-group-item"
+                onclick="categoryFilter('lactealYeast')"
+              >
+                <a>Fermento lácteo</a>
+              </li>
+              <li class="list-group-item" onclick="categoryFilter('flour')">
+                <a>Farinhas</a>
+              </li>
+              <li
+                class="list-group-item"
+                onclick="categoryFilter('stimulants')"
+              >
+                <a>Estimulantes</a>
+              </li>
+              <li class="list-group-item" onclick="categoryFilter('essencial')">
+                <a>Essencial</a>
+              </li>
+              <li class="list-group-item" onclick="categoryFilter('candy')">
+                <a>Doces</a>
+              </li>
               <li class="list-group-item" onclick="categoryFilter('all')">
                 <a>Todos</a>
               </li>
             </ul>
+          </div> -->
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button
+                  class="accordion-button card-header text-white text-uppercase"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne"
+                >
+                  <i
+                    class="fa fa-list"
+                    style="margin-right: 16px; margin-top: 2px"
+                  ></i
+                  ><a style="margin-top: 2px">Categorias</a>
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse show"
+                aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample"
+              >
+                <ul class="list-group category_block">
+                  <li
+                    class="list-group-item"
+                    onclick="categoryFilter('seasoningsSpices')"
+                  >
+                    <a>Temperos e especiarias</a>
+                  </li>
+                  <li
+                    class="list-group-item"
+                    onclick="categoryFilter('vegChips')"
+                  >
+                    <a>Vegetais Chips</a>
+                  </li>
+                  <li
+                    class="list-group-item"
+                    onclick="categoryFilter('collagen')"
+                  >
+                    <a>Colageno</a>
+                  </li>
+                  <li
+                    class="list-group-item"
+                    onclick="categoryFilter('vinegar')"
+                  >
+                    <a>Vinagre</a>
+                  </li>
+                  <li
+                    class="list-group-item"
+                    onclick="categoryFilter('vegetarian')"
+                  >
+                    <a>Vegetariano</a>
+                  </li>
+                  <li
+                    class="list-group-item"
+                    onclick="categoryFilter('veggies')"
+                  >
+                    <a>Vegetais</a>
+                  </li>
+                  <li
+                    class="list-group-item"
+                    onclick="categoryFilter('suplements')"
+                  >
+                    <a>Suplementos</a>
+                  </li>
+                  <li class="list-group-item" onclick="categoryFilter('snack')">
+                    <a>Snacks</a>
+                  </li>
+                  <li class="list-group-item" onclick="categoryFilter('seed')">
+                    <a>Sementes</a>
+                  </li>
+                  <li class="list-group-item" onclick="categoryFilter('salt')">
+                    <a>Sais</a>
+                  </li>
+                  <li
+                    class="list-group-item"
+                    onclick="categoryFilter('chemical')"
+                  >
+                    <a>Quimicos</a>
+                  </li>
+                  <li
+                    class="list-group-item"
+                    onclick="categoryFilter('cheese')"
+                  >
+                    <a>Queijos</a>
+                  </li>
+                  <li
+                    class="list-group-item"
+                    onclick="categoryFilter('soyProtein')"
+                  >
+                    <a>Proteina de soja</a>
+                  </li>
+                  <li class="list-group-item" onclick="categoryFilter('pate')">
+                    <a>Pate</a>
+                  </li>
+                  <li class="list-group-item" onclick="categoryFilter('bread')">
+                    <a>Pães</a>
+                  </li>
+                  <li class="list-group-item" onclick="categoryFilter('oil')">
+                    <a>Óleos</a>
+                  </li>
+                  <li class="list-group-item" onclick="categoryFilter('nuts')">
+                    <a>Nozes</a>
+                  </li>
+                  <li class="list-group-item" onclick="categoryFilter('honey')">
+                    <a>Mel</a>
+                  </li>
+                  <li
+                    class="list-group-item"
+                    onclick="categoryFilter('butter')"
+                  >
+                    <a>Manteigas</a>
+                  </li>
+                  <li class="list-group-item" onclick="categoryFilter('dairy')">
+                    <a>Lacteos</a>
+                  </li>
+                  <li
+                    class="list-group-item"
+                    onclick="categoryFilter('grains')"
+                  >
+                    <a>Grãos</a>
+                  </li>
+                  <li class="list-group-item" onclick="categoryFilter('jam')">
+                    <a>Geleias</a>
+                  </li>
+                  <li class="list-group-item" onclick="categoryFilter('fruit')">
+                    <a>Frutas</a>
+                  </li>
+                  <li
+                    class="list-group-item"
+                    onclick="categoryFilter('herbal')"
+                  >
+                    <a>Fitoterápicos</a>
+                  </li>
+                  <li
+                    class="list-group-item"
+                    onclick="categoryFilter('lactealYeast')"
+                  >
+                    <a>Fermento lácteo</a>
+                  </li>
+                  <li class="list-group-item" onclick="categoryFilter('flour')">
+                    <a>Farinhas</a>
+                  </li>
+                  <li
+                    class="list-group-item"
+                    onclick="categoryFilter('stimulants')"
+                  >
+                    <a>Estimulantes</a>
+                  </li>
+                  <li
+                    class="list-group-item"
+                    onclick="categoryFilter('essencial')"
+                  >
+                    <a>Essencial</a>
+                  </li>
+                  <li class="list-group-item" onclick="categoryFilter('candy')">
+                    <a>Doces</a>
+                  </li>
+                  <li
+                    class="list-group-item"
+                    onclick="categoryFilter('sweeteners')"
+                  >
+                    <a>Adoçantes</a>
+                  </li>
+                  <li class="list-group-item" onclick="categoryFilter('sugar')">
+                    <a>Açucar</a>
+                  </li>
+                  <li
+                    class="list-group-item"
+                    onclick="categoryFilter('chocolateMilk')"
+                  >
+                    <a>Achocolatado</a>
+                  </li>
+                  <li class="list-group-item" onclick="categoryFilter('rice')">
+                    <a>Arroz</a>
+                  </li>
+                  <li
+                    class="list-group-item"
+                    onclick="categoryFilter('drinks')"
+                  >
+                    <a>Bebidas</a>
+                  </li>
+                  <li class="list-group-item" onclick="categoryFilter('jelly')">
+                    <a>Gelatinas</a>
+                  </li>
+                  <li
+                    class="list-group-item"
+                    onclick="categoryFilter('floral')"
+                  >
+                    <a>Floral</a>
+                  </li>
+                  <li
+                    class="list-group-item"
+                    onclick="categoryFilter('energyDrinks')"
+                  >
+                    <a>Energeticos</a>
+                  </li>
+                  <li
+                    class="list-group-item"
+                    onclick="categoryFilter('gourmetChocolate')"
+                  >
+                    <a>Chocolates Gourmet</a>
+                  </li>
+                  <li class="list-group-item" onclick="categoryFilter('syrup')">
+                    <a>Caldas</a>
+                  </li>
+                  <li class="list-group-item" onclick="categoryFilter('tea')">
+                    <a>Chás</a>
+                  </li>
+                  <li
+                    class="list-group-item"
+                    onclick="categoryFilter('frozen')"
+                  >
+                    <a>Congelados</a>
+                  </li>
+                  <li
+                    class="list-group-item"
+                    onclick="categoryFilter('preserves')"
+                  >
+                    <a>Conservas</a>
+                  </li>
+                  <li class="list-group-item" onclick="categoryFilter('clay')">
+                    <a>Argilas</a>
+                  </li>
+                  <li
+                    class="list-group-item"
+                    onclick="categoryFilter('organicBanana')"
+                  >
+                    <a>Banana Organica</a>
+                  </li>
+                  <li
+                    class="list-group-item"
+                    onclick="categoryFilter('cerealBars')"
+                  >
+                    <a>Barras de Cereais</a>
+                  </li>
+                  <li
+                    class="list-group-item"
+                    onclick="categoryFilter('biomass')"
+                  >
+                    <a>Biomassa</a>
+                  </li>
+                  <li
+                    class="list-group-item"
+                    onclick="categoryFilter('cookie')"
+                  >
+                    <a>Biscoito</a>
+                  </li>
+                  <li class="list-group-item" onclick="categoryFilter('cocoa')">
+                    <a>Cacau</a>
+                  </li>
+                  <li
+                    class="list-group-item"
+                    onclick="categoryFilter('breakfastCereals')"
+                  >
+                    <a>Cereais Matinais</a>
+                  </li>
+                  <li class="list-group-item" onclick="categoryFilter('cream')">
+                    <a>Creme</a>
+                  </li>
+                  <li class="list-group-item" onclick="categoryFilter('all')">
+                    <a>Todos</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
         <div class="col">
@@ -65,6 +445,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="data.js"></script>
     <script src="index.js"></script>
   </body>
 </html>
