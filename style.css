@@ -106,12 +106,68 @@ footer a {
 }
 
 .card-img-top {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+
   border-radius: calc(0.5rem - 1px) !important;
 }
 .card {
+  justify-content: center;
+  display: inline-block;
+  width: 244px;
+  height: 244px;
+  object-fit: cover;
   border-radius: calc(0.5rem - 1px) !important;
 }
-
+@media screen and (max-width: 1399px) {
+  .card {
+    width: 200px !important;
+    height: 200px !important;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .card {
+    width: 230px !important;
+    height: 230px !important;
+  }
+}
+@media screen and (max-width: 991px) {
+  .card {
+    width: 250px !important;
+    height: 250px !important;
+  }
+}
+@media screen and (max-width: 536px) {
+  .card {
+    width: 245px !important;
+    height: 245px !important;
+  }
+}
+@media screen and (max-width: 512px) {
+  .card {
+    width: 190px !important;
+    height: 190px !important;
+  }
+}
+@media screen and (max-width: 410px) {
+  .card {
+    width: 165px !important;
+    height: 165px !important;
+  }
+}
+@media screen and (max-width: 377px) {
+  .card {
+    width: 160px !important;
+    height: 160px !important;
+  }
+}
+@media screen and (max-width: 333px) {
+  .card {
+    width: 143px !important;
+    height: 143px !important;
+  }
+}
 .card-title {
   white-space: nowrap;
   overflow: hidden;

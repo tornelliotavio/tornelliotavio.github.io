@@ -1,4 +1,4 @@
-let currentCategory = 'all';
+let currentCategory = 'herbal';
 
 for (let item in items) {
   let arr = items[item].name.toLowerCase().split(' ');
@@ -24,15 +24,6 @@ categoryMobileHTML.innerHTML = finalCategoriesMobile;
 
 categoryFilter(currentCategory);
 
-function addToItemList(itemListHTML, item) {
-  itemListHTML.innerHTML +=
-    `<div class="col-6 col-md-6 col-lg-4 col-xl-3 cardContainer"><div class="card"><img class="card-img-top" src="${item.image}" alt="Card image cap"><div class="card-body"><h4 class="card-title" data-bs-toggle="tooltip" data-bs-placement="top" title="${item.name}"><a>` +
-    item.name +
-    '</a></h4></div></div></div></div></div>';
-  $(function () {
-    $('[data-bs-toggle="tooltip"]').tooltip();
-  });
-}
 function getAddToCategory(cat, mobile = false) {
   return (
     `<li id="` +
@@ -48,11 +39,25 @@ function getAddToCategory(cat, mobile = false) {
 }
 
 function getAddToItemListHtml(item) {
+  const jpgFileName = './assets/products/' + item.name.toUpperCase() + '.jpg';
+  const pngFileName = './assets/products/' + item.name.toUpperCase() + '.png';
+
+  let image = jpgFileName;
+
+  // try {
+  //   if (fs.existsSync('./assets/products/' + jpgFileName)) {
+  //     image = './assets/products/' + jpgFileName;
+  //   }
+  //   if (fs.existsSync('./assets/products/' + pngFileName)) {
+  //     image = './assets/products/' + pngFileName;
+  //   }
+  // } catch (err) {
+  //   console.error(err);
+  // }
+
   return `<div class="col-6 col-md-6 col-lg-4 col-xl-3 cardContainer">
             <div class="card">
-              <img class="card-img-top" src="${
-                item.image
-              }" alt="Card image cap">
+              <img class="card-img-top" src="${item.image}" alt="${item.name}">
             </div>
             <div class="card-body">
               <h4 style="margin-bottom: 0px;" class="card-title" data-bs-toggle="tooltip" data-bs-placement="top" title="${
