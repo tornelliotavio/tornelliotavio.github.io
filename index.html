@@ -33,7 +33,7 @@
           ><img class="header-logo" src="logoWhite.png"
         /></a>
 
-        <div class="form-group has-search" style="margin: 12px">
+        <div class="form-group has-search" style="margin: 12px 0">
           <span class="fa fa-search form-control-feedback"></span>
           <input
             onkeyup="searchFilter()"
@@ -45,22 +45,33 @@
         </div>
       </div>
     </nav>
-
     <div class="container">
       <div class="row">
         <div class="col-sm-12 col-md-3" style="margin-bottom: 10px">
-          <!-- <div class="card bg-light mb-3">
-            <div class="card-header text-white text-uppercase">
-              <i class="fa fa-list"></i>Categorias
+          <div class="content-desktop card bg-light mb-3">
+            <div
+              class="card-header text-white text-uppercase"
+              style="text-align: left"
+            >
+              <i
+                class="fa fa-list"
+                style="margin-right: 16px; margin-top: 6px"
+              ></i
+              ><a style="margin-top: 2px">Categorias</a>
             </div>
-            <ul class="list-group category_block">
+            <ul id="list-group" class="list-group category_block"></ul>
+            <!-- <ul class="list-group category_block">
               <li
                 class="list-group-item"
                 onclick="categoryFilter('seasoningsSpices')"
               >
                 <a>Temperos e especiarias</a>
               </li>
-              <li class="list-group-item" onclick="categoryFilter('vegChips')">
+              <li
+                id="vegChips"
+                class="list-group-item"
+                onclick="categoryFilter('vegChips')"
+              >
                 <a>Vegetais Chips</a>
               </li>
               <li class="list-group-item" onclick="categoryFilter('collagen')">
@@ -159,36 +170,130 @@
               <li class="list-group-item" onclick="categoryFilter('candy')">
                 <a>Doces</a>
               </li>
-              <li class="list-group-item" onclick="categoryFilter('all')">
+              <li
+                class="list-group-item"
+                onclick="categoryFilter('sweeteners')"
+              >
+                <a>Adoçantes</a>
+              </li>
+              <li class="list-group-item" onclick="categoryFilter('sugar')">
+                <a>Açucar</a>
+              </li>
+              <li
+                class="list-group-item"
+                onclick="categoryFilter('chocolateMilk')"
+              >
+                <a>Achocolatado</a>
+              </li>
+              <li class="list-group-item" onclick="categoryFilter('rice')">
+                <a>Arroz</a>
+              </li>
+              <li class="list-group-item" onclick="categoryFilter('drinks')">
+                <a>Bebidas</a>
+              </li>
+              <li class="list-group-item" onclick="categoryFilter('jelly')">
+                <a>Gelatinas</a>
+              </li>
+              <li class="list-group-item" onclick="categoryFilter('floral')">
+                <a>Floral</a>
+              </li>
+              <li
+                class="list-group-item"
+                onclick="categoryFilter('energyDrinks')"
+              >
+                <a>Energeticos</a>
+              </li>
+              <li
+                class="list-group-item"
+                onclick="categoryFilter('gourmetChocolate')"
+              >
+                <a>Chocolates Gourmet</a>
+              </li>
+              <li class="list-group-item" onclick="categoryFilter('syrup')">
+                <a>Caldas</a>
+              </li>
+              <li class="list-group-item" onclick="categoryFilter('tea')">
+                <a>Chás</a>
+              </li>
+              <li class="list-group-item" onclick="categoryFilter('frozen')">
+                <a>Congelados</a>
+              </li>
+              <li class="list-group-item" onclick="categoryFilter('preserves')">
+                <a>Conservas</a>
+              </li>
+              <li class="list-group-item" onclick="categoryFilter('clay')">
+                <a>Argilas</a>
+              </li>
+              <li
+                class="list-group-item"
+                onclick="categoryFilter('organicBanana')"
+              >
+                <a>Banana Organica</a>
+              </li>
+              <li
+                class="list-group-item"
+                onclick="categoryFilter('cerealBars')"
+              >
+                <a>Barras de Cereais</a>
+              </li>
+              <li class="list-group-item" onclick="categoryFilter('biomass')">
+                <a>Biomassa</a>
+              </li>
+              <li class="list-group-item" onclick="categoryFilter('cookie')">
+                <a>Biscoito</a>
+              </li>
+              <li class="list-group-item" onclick="categoryFilter('cocoa')">
+                <a>Cacau</a>
+              </li>
+              <li
+                class="list-group-item"
+                onclick="categoryFilter('breakfastCereals')"
+              >
+                <a>Cereais Matinais</a>
+              </li>
+              <li class="list-group-item" onclick="categoryFilter('cream')">
+                <a>Creme</a>
+              </li>
+              <li
+                class="allItem list-group-item"
+                onclick="categoryFilter('all')"
+              >
                 <a>Todos</a>
               </li>
-            </ul>
-          </div> -->
-          <div class="accordion" id="accordionExample">
+            </ul> -->
+          </div>
+          <div class="content-mobile accordion" id="accordionExample">
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingOne">
                 <button
-                  class="accordion-button card-header text-white text-uppercase"
+                  class="
+                    accordion-button
+                    card-header
+                    text-white text-uppercase
+                    collapsed
+                  "
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapseOne"
                   aria-expanded="true"
                   aria-controls="collapseOne"
                 >
-                  <i
-                    class="fa fa-list"
-                    style="margin-right: 16px; margin-top: 2px"
-                  ></i
+                  <i class="category-margin fa fa-list"></i
                   ><a style="margin-top: 2px">Categorias</a>
                 </button>
               </h2>
               <div
                 id="collapseOne"
-                class="accordion-collapse collapse show"
+                class="accordion-collapse collapse"
                 aria-labelledby="headingOne"
                 data-bs-parent="#accordionExample"
               >
-                <ul class="list-group category_block">
+                <ul
+                  id="list-groupMobile"
+                  class="list-group category_block"
+                ></ul>
+
+                <!-- <ul class="list-group category_block">
                   <li
                     class="list-group-item"
                     onclick="categoryFilter('seasoningsSpices')"
@@ -426,15 +531,23 @@
                   <li class="list-group-item" onclick="categoryFilter('cream')">
                     <a>Creme</a>
                   </li>
-                  <li class="list-group-item" onclick="categoryFilter('all')">
+                  <li
+                    class="allItem list-group-item"
+                    onclick="categoryFilter('all')"
+                  >
                     <a>Todos</a>
                   </li>
-                </ul>
+                </ul> -->
               </div>
             </div>
           </div>
         </div>
+
         <div class="col">
+          <div class="item-list-title-container">
+            <h1 id="item-list-title"></h1>
+          </div>
+          <!-- <hr /> -->
           <div id="item-list" class="row"></div>
         </div>
       </div>

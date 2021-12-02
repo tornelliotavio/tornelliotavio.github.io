@@ -9,15 +9,27 @@
   font-size: 150%;
 }
 .category_block li:hover {
-  background-color: #c5c5c5;
+  /* color: white;
+  background-color: #f3803f; */
 }
 .category_block li:hover a {
-  color: #ffffff;
+  /* color: #ffffff; */
 }
 .category_block li a {
   color: #f17329;
   /* color: #343a40; */
 }
+.list-group-item.active {
+  color: white !important;
+  background-color: #f3803f !important;
+  border-color: #f5742a !important;
+}
+
+.allItem {
+  background-color: #f3803f !important;
+  color: white !important;
+}
+
 .add_to_cart_block .price {
   color: #c01508;
   text-align: center;
@@ -25,6 +37,11 @@
   font-size: 200%;
   margin-bottom: 0;
 }
+
+.list-group-item {
+  cursor: pointer;
+}
+
 .add_to_cart_block .price_discounted {
   color: #343a40;
   text-align: center;
@@ -63,6 +80,16 @@ footer a {
 .header-logo {
   height: 80px;
 }
+
+.category-margin {
+  margin-right: 16px;
+  margin-top: 2px;
+}
+@media screen and (max-width: 991px) and (min-width: 768px) {
+  .category-margin {
+    margin-right: 5px;
+  }
+}
 .container {
   text-align: center;
   display: flow-root !important;
@@ -71,6 +98,11 @@ footer a {
   background-color: #f17329 !important;
   border-top-left-radius: 10px !important;
   border-top-right-radius: 10px !important;
+}
+@media screen and (max-width: 991px) and (min-width: 768px) {
+  .card-header {
+    font-size: 12px !important;
+  }
 }
 
 .card-img-top {
@@ -89,6 +121,29 @@ footer a {
 
 .cardContainer {
   padding-bottom: 12px;
+}
+
+hr {
+  margin-top: 0 !important;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#item-list-title {
+  color: white;
+  /* text-align: left; */
+  /* margin-bottom: 11px; */
+  font-size: 35px;
+  padding: 5px 0;
+}
+.item-list-title-container {
+  background-color: #f17329;
+  border-radius: 10px;
+}
+
+.item-footer {
+  font-size: 13px;
 }
 
 .accordion-item {
@@ -122,4 +177,21 @@ footer a {
   text-align: center;
   pointer-events: none;
   color: #aaa;
+}
+
+@media screen and (min-width: 992px) {
+  .content-desktop {
+    display: block !important;
+  }
+  .content-mobile {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 991px) {
+  .content-desktop {
+    display: none !important;
+  }
+  .content-mobile {
+    display: block !important;
+  }
 }
